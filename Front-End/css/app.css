@@ -88,10 +88,13 @@ body, html {
     transform: translate(-50%, -50%);
 }
 .text-content button:hover {
-    background-color: bisque;
+    background-image: url('https://i.pinimg.com/originals/49/6e/a9/496ea99942eea8bade5516a5f88ee54d.png');
+    background-position: center;
     font-size: 1.2em;
-    transform: scale(1.1) translateX(-45%);
+    transform: scale(1.6) translateX(-45%);
     margin-top: 10px;
+    box-shadow: 10px 10px rgba(255, 91, 21, 0.2);
+    border-radius: 15px 15px 15px 15px;
 }
 
 
