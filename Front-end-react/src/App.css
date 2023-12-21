@@ -1,0 +1,625 @@
+body, html {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Bubblegum Sans', cursive;
+  background-image: url('https://images.hdqwalls.com/download/spongebob-4k-wy-3840x2160.jpg'); 
+  scroll-behavior: smooth;
+  
+}
+.navbar h1{
+  margin-left: 2em;
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.navbar h1 img{
+ width: 30vh;
+ max-height: auto;
+}
+.navbar h1 .logo{
+  position: relative;
+}
+.navbar {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      z-index: 1000; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5em 0;
+      background-color: #fff;
+      margin: 0; 
+  }
+
+  .navbar .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1em; 
+  }
+  
+
+
+  .navbar-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Lobster', cursive; 
+      color: #FFD700; 
+      font-size: 2em; 
+      margin: 0; 
+      display: inline;
+  }
+  
+
+.navigation a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase; 
+  font-size: 1,6em; 
+}
+.navigation a:hover{
+content: url('https://styles.redditmedia.com/t5_2sc60/styles/communityIcon_ee7o465jds3c1.png');
+max-width: 35px;
+max-height: 35px;
+border-radius: 15px 15px 15px 15px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center; 
+  margin-top: 0; 
+  height: 100vh; 
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.text-content {
+  flex-basis: 50%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+
+.text-content h2 {
+  justify-content: center;
+  font-size: 1.8em; 
+  font-weight: normal;
+  letter-spacing: 1px; 
+  color: #333; 
+  margin-bottom: 0.5em; 
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  
+}
+
+.text-content p {
+  font-size: 2em; 
+  font-weight: bold;
+  line-height: 1.2; 
+  color: #333;
+  margin-bottom: 1em; 
+  font-family: 'Bubblegum Sans', cursive;
+  
+}
+
+.text-content button {
+  font-family: monospace;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  border: 2px solid #333; 
+  background-color: transparent; 
+  color: #333;
+  font-weight: bold;
+  margin-top: 2em;
+  align-self: center; 
+}
+
+
+.text-content button:hover {
+  background-image: url('https://i.pinimg.com/originals/49/6e/a9/496ea99942eea8bade5516a5f88ee54d.png');
+  background-position: center;
+  font-size: 1.2em;
+  color: transparent;
+  transform: scale(1.6) ;
+  box-shadow: 10px 10px rgba(255, 91, 21, 0.2);
+  border-radius: 15px;
+  position: relative;
+}
+
+
+
+.image-content {
+  flex-basis: 50%; 
+}
+
+
+.image-content img {
+  width: 100%; 
+  height: 100vh; 
+}
+
+.info-section {
+  background-color: #000000; 
+  padding: 40px 0; 
+  height: 100vh; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.container {
+  width: 80%; 
+  margin: 0 auto;
+  max-width: 1200px; 
+  text-align: center;
+}
+
+
+
+.info-section h2 {
+  font-size: 2.5em; 
+  margin-bottom: 0.5em; 
+  text-align: center; 
+  color:#fff ;
+
+}
+
+.info-section .lead {
+  font-size: 1.5em; 
+  font-weight: 300; 
+  text-align: center; 
+  margin-bottom: 1em; 
+}
+
+.info-section p {
+  color: #fff;
+  line-height: 1.6; 
+  text-align: justify; 
+}
+
+.section-container {
+  display: flex;
+}
+
+
+.text-container, .image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+}
+
+.text-container {
+  background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c803cc143597447.627d2a371c247.png');
+  background-size:100%;
+  flex: 1;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  align-items: center; 
+  padding: 2em; 
+  background-color: #fff;
+  width: auto; 
+  max-width: 50%; 
+  max-width: 70%;
+  display: inline-flex;
+
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.image-container .img-menu{
+  float: right;
+
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+.image-row:first-child,
+.image-row:last-child {
+justify-content: space-around;
+}
+
+.image-row:nth-child(2) {
+justify-content: space-around; 
+align-items: center;
+}
+
+.image-container img {
+  margin: 2em;
+max-width: 100%; 
+max-height: 200px; 
+object-fit: cover; 
+}
+
+.reservations-section {
+  display: flex;
+  height: 100vh;
+  color: #000000;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/dde47yj-aea81a6b-3874-4ed8-aea3-26a456c7a23f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkODdiMGY0LWFlMjYtNGIxOC04MzVjLWFmM2E3Y2UxMzQ5ZlwvZGRlNDd5ai1hZWE4MWE2Yi0zODc0LTRlZDgtYWVhMy0yNmE0NTZjN2EyM2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VeuUbwR7x4o7yk_8D-jPMoTPXD5mVmMEdbJ6CEG9B9s');    
+  margin: 0;
+  align-items: center; 
+  justify-content: center; 
+}
+.reservations-info, .form-container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  align-items: center; 
+  padding: 2em; 
+  background-color: #fff;
+  width: auto; 
+  max-width: 50%; 
+  max-width: 70%;
+  display: inline-flex;
+  margin-bottom: 2em;;
+}
+
+
+
+.reservations-info h2 {
+  margin-bottom: 0.5em; 
+  text-align: center;
+}
+
+.reservations-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  
+}
+.form-container {
+  flex: 1;        
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 95%; 
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 15px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.form-container form {
+  width: 50%; 
+  max-width: 500px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form-container label {
+  font-size: 1em;
+  color: #333333; 
+  margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="date"],
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333333;
+  border-radius: 5px; 
+  font-family: 'Arial', sans-serif;
+}
+
+.form-container input[type="submit"] {
+  background-color: #FFD700; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #FFA500;
+}
+select {
+  width: 100%; 
+  padding: 10px;
+  margin: 10px 0; 
+  border: 1px solid #333; 
+  border-radius: 5px; 
+  font-family: Arial, sans-serif; 
+  cursor: pointer; 
+}
+
+select::-ms-expand {
+  display: none; 
+}
+
+.takeAway-section {
+  display: flex;
+  height: 100vh;
+  color: #000000;
+  background-image: url('https://e0.pxfuel.com/wallpapers/887/92/desktop-wallpaper-viacom-files-lawsuit-against-would-be-krusty-krab-restaurant.jpg');    
+  margin: 0;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.takeAway-info, .takeAway-form-container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 15px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.food-choice label {
+  display: block; 
+  cursor: pointer;
+  margin: 10px 0; 
+  text-align: center;
+}
+
+.food-choice img {
+  max-width: 100px; 
+  height: auto; 
+  margin-bottom: 10px; 
+}
+
+.food-choice input[type="radio"] {
+  display: none; 
+}
+
+.food-choice label:hover {
+  background-color: #f0f0f0; 
+}
+.food-choice input[type="radio"]:checked + img {
+  border: 2px solid blue; 
+}
+
+
+.food-choice label:hover {
+  background-color: #f0f0f0; 
+}
+
+.food-choice input[type="radio"]:checked + img {
+  border: 2px solid blue; 
+}
+
+
+
+.takeAway-info h2 {
+  margin-bottom: 0.5em; 
+  text-align: center;
+}
+
+.takeAway-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  
+}
+.takeAway-form-container {
+  flex: 1;        
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 95%; 
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 15px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.takeAway-form-container form {
+  width: 50%; 
+  max-width: 500px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.takeAway-form-container label {
+  font-size: 1em;
+  color: #333333; 
+  margin-bottom: 5px;
+}
+
+.takeAway-form-container input[type="text"],
+.takeAway-form-container input[type="email"],
+.takeAway-form-container input[type="tel"],
+.takeAway-form-container input[type="date"],
+.takeAway-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333333;
+  border-radius: 5px; 
+  font-family: 'Arial', sans-serif;
+}
+
+.takeAway-form-container input[type="submit"] {
+  background-color: #FFD700; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.takeAway-form-container input[type="submit"]:hover {
+  background-color: #FFA500;
+}
+select {
+  width: 100%; 
+  padding: 10px;
+  margin: 10px 0; 
+  border: 1px solid #333; 
+  border-radius: 5px; 
+  font-family: Arial, sans-serif; 
+  cursor: pointer; 
+}
+
+select::-ms-expand {
+  display: none; 
+}
+
+.content-container, .info-section, .neighborhood-section, 
+.reservations-section, .takeAway-section {
+  margin-bottom: 0.5em;
+}
+
+#title-Tag-Line {
+  font-size: 20px;
+}
+ .card-item__bg{
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  transform: translate(0px, 50px);
+  z-index: 5;
+} 
+
+.form {
+  float: inline-start;
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 680px;
+  margin-left: 30px;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: relative;
+  border-top: 5px solid #ffb01f;
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 480px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.pageTitle{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.name {
+  background-color: #ebebeb;
+  color: white;
+}
+.name:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #0e3721;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+} 
+
+
