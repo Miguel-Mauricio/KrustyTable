@@ -3,13 +3,21 @@ $(function(){
 
     getFoodValues();
 
+
+    $("#btn-takeaway").click(function(){
+      var date=new Date();
+          alert("Let's prepare your food");
+          post();
+          get();
+        });
+
      var info= undefined;
-     $("#btn-takeaway").click(function(){
-     var date=new Date();
-         alert("Let's prepare your food");
-         post();
-         get();
+
+
+     $("#btn-get-takeaway").click(function(){
+        getOrderDetails( $("#orderId").val() );
        });
+
        function successCallback(response) {
 
          if(response.id){
@@ -75,3 +83,30 @@ $(function(){
 
 
     }
+
+    async function getOrderDetails(orderId){
+
+      $("#getResponse").empty();
+
+      var response = await fetch(`http://localhost:8080/took-away/api/order/${orderId}`);
+      var element = await response.json();
+
+      var text = `
+      <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Order Number: ${element.id}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Order Details:</h6>
+        <p class="card-text">${element.firstName} ${element.lastName}</p>
+        <p class="card-text">What you ordered:</p>
+        <p class="card-text">${element.food.name}</p>
+        <p class="card-text">Price: ${element.food.price}</p>
+        <p class="card-text">Food Id: ${element.food.id}</p>
+      </div>
+    </div>
+    `
+      
+
+      $("#getResponse").append(text);
+
+
+   }
