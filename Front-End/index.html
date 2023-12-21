@@ -9,8 +9,10 @@
 
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css" />
 
     <meta name="theme-color" content="#fafafa" />
@@ -29,29 +31,31 @@
     </div>
 
     <div class="content-container">
-        <div class="scroll-arrow-container">
-            <img src="https://theraphael.wpengine.com/wp-content/uploads/2020/05/arrow-down.png" alt="Scroll Down"
-                class="scroll-arrow" onclick="scrollDown()">
-        </div>
-        <div class="text-content">
-            <h2>__ WELCOME to Krusty Table__</h2>
-            <p>Hey Hey.</p>
+        <div class="text-content" onclick="scrollDown()">
+            <h2>Ahoy mateys!</h2>
+            <p>Don't just float there...</p>
+            <p>press the button belowfor a treasure</p>
+            <p>trove of tastes at Krusty Table!</p>
+
+
+
             <button>Let's Take a Ride!</button>
         </div>
         <div class="image-content">
-            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06d20874-f823-4eb0-8b93-2b9f4aa85518/deb5mhv-995a6966-ff36-4f4f-af7f-cff4d029102c.jpg/v1/fill/w_1029,h_777,q_70,strp/the_krusty_krab_landscape__8k_ai_remastered__by_lazyfick_deb5mhv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjEyMCIsInBhdGgiOiJcL2ZcLzA2ZDIwODc0LWY4MjMtNGViMC04YjkzLTJiOWY0YWE4NTUxOFwvZGViNW1odi05OTVhNjk2Ni1mZjM2LTRmNGYtYWY3Zi1jZmY0ZDAyOTEwMmMuanBnIiwid2lkdGgiOiI8PTgxMDQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.6-N_U0E15YzTP72WNyxqkcfBmjt6wm877WKCFGzjazo"
-                alt="Interior">
+            <img src="https://e0.pxfuel.com/wallpapers/230/149/desktop-wallpaper-krusty-krab.jpg" alt="Interior">
         </div>
     </div>
     <section id="about-section" class="info-section">
         <div class="container">
-            <h2>About</h2>
-            <p class="lead">Village-like appeal and nightlife at the heart of Brooklyn's Boerum Hill.</p>
-            <p>The property sits at the meeting place of two of Brooklyn's greatest and most convenient neighborhoods.
-                Cobble Hill, known for its quiet streets, restaurants, and shopping, offers any resident everything
-                needed for a full city life. Boerum Hill, known for its lively bars and relaxed streets of shops, offers
-                immediate proximity to concerts and sporting events at Barclays Center as well as the offices and
-                central transit of Downtown Brooklyn. It's everything you need, steps from Wyckoff Street.</p>
+            <h2>About Krusty Table: Where the Sea Meets the Flavor!</h2>
+            <p class="lead">Ahoy there, sea-faring foodies and SpongeBob aficionados!</p>
+            <p>
+                 Welcome aboard the Krusty Table, the only place under the sea where the food is as legendary as the folklore! 
+                 Nestled in the heart of Bikini Bottom, our restaurant offers a dining experience that's as unique as a talking sponge and as delightful as a pineapple under the sea.
+                At Krusty Table, we're more than just a restaurant, we're a culinary adventure. 
+                Remember, at Krusty Table, you are not just our customer; you are part of our oceanic family. Let’s make some waves together!
+                
+                </p>
         </div>
     </section>
 
@@ -83,26 +87,65 @@
         </div>
         <div class="form-container">
             <form>
+                <br>
+                <br>
+                <br>
                 <label for="shift">Choose wisely, sea-foodie: Lunch with SpongeBob's jellyfish jam or dinner under the stars with Patrick? Either way, you're in for a whale of a time!:</label>
-                <select id="shift" name="shift" size="2">
+                <br>
+                <select id="shift" name="shift" >
                     <option value="lunch">Lunch</option>
                     <option value="dinner">Dinner</option>
                 </select>
                 <label for="date">Choose the date of your reservation</label>
                 <input type="date" id="date-input" name="date-inp">
                 <label for="fname">First Name:</label><br>
-                <input type="text" id="fname" name="name" value="first name">
+                <input type="text" id="fname" name="name" placeholder="first name">
                 <label for="lname">Last Name:</label><br>
-                <input type="text" id="lname" name="lastName" value="last name">
+                <input type="text" id="lname" name="lastName" placeholder="last name">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="Your email here">
+                <input type="email" id="email" name="email" placeholder="Your email here">
                 <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="Phone-Number" value="Insert Your phone">
+                <input type="tel" id="phone" name="Phone-Number" placeholder="Insert Your phone">
                 <input id="btn-reservations" type="submit" value="Submit">
             </form>
         </div>
     </section>
 
+
+    <section id="takeAway-section" class="takeAway-section">
+        <div class="takeAway-info">
+            <h2>Grab a Bite on the Go!</h2>
+            <ul>
+                <li>Welcome to the take-away zone, where speed meets taste in a whirlpool of flavors! </li>
+                <li>Here at Krusty Table, we understand that your time is as precious as a pearl, but that shouldn't mean missing out on the culinary treasures of Bikini Bottom.</li>
+                <li>--</li>
+            </ul>
+        </div>
+        <div class="takeAway-form-container">
+            <form>
+                <br>
+                <br>
+                <br>
+                <label for="food-choice">Choose wisely, sea-foodie: Lunch with SpongeBob's jellyfish jam or dinner under the stars with Patrick? Either way, you're in for a whale of a time!:</label>
+                <br>
+                <select id="food-choice" name="food-choice" >
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                <label for="date">Ahoy! Who are you sailor?</label>
+                <input type="date" id="date-input" name="date-inp">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="name" placeholder="first name">
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lastName" placeholder="last name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email here">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="Phone-Number" placeholder="Insert Your phone">
+                <input id="btn-reservations" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
     <script>
         function scrollDown() {
 
@@ -133,16 +176,7 @@
 });
 
     </script>
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery ||
-            document.write('<script src="js/vendor/jquery-3.4.0.min.js"><\/script>');
-    </script>
-    <script src="js/plugins.js"></script>
-
-    <script data-main="js/app/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+  
 </body>
 
 </html>
