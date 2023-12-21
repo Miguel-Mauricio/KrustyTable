@@ -1,26 +1,17 @@
-package org.example.model;
+package org.example.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sun.org.apache.xpath.internal.operations.Or;
+import org.example.model.UserOrder;
 
-import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
-import java.util.ArrayList;
-import java.util.List;
 
-@Entity
-public class Food {
+public class FoodDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
 
     private Double price;
 
-    @OneToOne
-    @JoinColumn(name = "order_id")
     private UserOrder userOrder;
 
     public Integer getId() {

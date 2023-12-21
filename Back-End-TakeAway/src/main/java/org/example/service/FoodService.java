@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Optional;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.*;
 
 @Service
 public class FoodService {
@@ -35,6 +35,16 @@ public class FoodService {
                 .orElseThrow(NoSuchFieldError::new);
 
         foodDao.delete(id);
+    }
+
+    @Transactional
+    public Set<Integer> setList() {
+       List<Food> foods = foodDao.findAll();
+
+        Set<Integer> keys = new HashSet<>();
+        foods.stream().forEach( arg -> keys.add(arg.getId()) );
+
+        return keys;
     }
 
     @Transactional

@@ -1,7 +1,8 @@
 package org.example.controller;
 
+import org.example.dto.OrderDto;
+import org.example.dto.assembler.OrderDtoAssembler;
 import org.example.model.Food;
-import org.example.model.FoodList;
 import org.example.model.UserOrder;
 import org.example.service.FoodService;
 import org.example.service.UserOrderService;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,7 +24,7 @@ public class UserOrderController {
 
     private FoodService foodService;
 
-    private FoodList foodList;
+    private OrderDtoAssembler orderDtoAssembler;
 
     @Autowired
     public void setUserOrderService(UserOrderService userOrderService) {
@@ -35,8 +37,8 @@ public class UserOrderController {
     }
 
     @Autowired
-    public void setFoodList(FoodList foodList) {
-        this.foodList = foodList;
+    public void setOrderDtoAssembler(OrderDtoAssembler orderDtoAssembler) {
+        this.orderDtoAssembler = orderDtoAssembler;
     }
 
     @RequestMapping(value = "/{id}",
@@ -63,21 +65,19 @@ public class UserOrderController {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<?> addOrder(@RequestBody UserOrder user, BindingResult bindingResult){
+    public ResponseEntity<?> addOrder(@Valid @RequestBody OrderDto orderDto, BindingResult bindingResult){
 
-        if (bindingResult.hasErrors() || user.getEmail() == null ){
+        if (bindingResult.hasErrors() || orderDto.getEmail() == null ){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        for(Food food : user.getFoods()){
-            if( !foodList.getFoodMap().containsKey( food.getName())){
-                return new ResponseEntity<>("This product name is not allowed",HttpStatus.BAD_REQUEST);
-            }
+        if ( !foodService.setList().contains( orderDto.getFood().getId() ) ){
+            return new ResponseEntity<>("No product found with this id",HttpStatus.BAD_REQUEST);
         }
 
+        UserOrder userOrder = orderDtoAssembler.convertFromDto(orderDto);
+        UserOrder savedOrder = userOrderService.save(userOrder);
 
-        UserOrder userOrder = userOrderService.save(user, user.getFoods());
-
-        return new ResponseEntity<>(userOrder,HttpStatus.CREATED);
+        return new ResponseEntity<>(savedOrder,HttpStatus.CREATED);
     }
 }

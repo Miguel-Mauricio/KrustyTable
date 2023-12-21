@@ -39,14 +39,8 @@ public class UserOrderService {
 
     @Transactional
     public UserOrder save(UserOrder order) {
-        return userOrderDao.saveOrUpdate(order);
-    }
-
-    @Transactional
-    public UserOrder save(UserOrder order, List<Food> foods) {
-
-        order.getFoods().stream().forEach( arg -> {arg.setUserOrder(order); foodDao.saveOrUpdate(arg);} );
-
+        Food food = foodDao.findById( order.getFood().getId() );
+        foodDao.saveOrUpdate( food );
         return userOrderDao.saveOrUpdate(order);
     }
 

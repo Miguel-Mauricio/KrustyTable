@@ -1,31 +1,36 @@
-package org.example.model;
+package org.example.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import org.example.model.Food;
 
-@Entity
-public class UserOrder {
+import javax.validation.constraints.*;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OrderDto {
+
+
     private Integer id;
 
-    private String firstName;
+    @NotNull(message = "First name is mandatory")
+    @NotBlank(message = "First name is mandatory")
+    @Size(min = 3, max = 64)
+    private  String firstName;
 
+    @NotNull(message = "Last name is mandatory")
+    @NotBlank(message = "Last name is mandatory")
+    @Size(min = 3, max = 64)
     private String lastName;
 
+    @Email
     private String email;
 
+    @Pattern(regexp = "^\\+?[0-9]*$", message = "Phone number contains invalid characters")
+    @Size(min = 9, max = 16)
     private String phone;
 
-    @OneToOne
     private Food food;
 
     private String status;
-    
+
     public Integer getId() {
         return id;
     }

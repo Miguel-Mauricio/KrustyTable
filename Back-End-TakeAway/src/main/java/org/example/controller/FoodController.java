@@ -1,7 +1,8 @@
 package org.example.controller;
 
+import org.example.dto.FoodDto;
+import org.example.dto.assembler.FoodDtoAssembler;
 import org.example.model.Food;
-import org.example.model.FoodList;
 import org.example.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,11 +21,11 @@ public class FoodController {
 
     private FoodService foodService;
 
-    private FoodList foodList;
+    private FoodDtoAssembler dtoAssembler;
 
     @Autowired
-    public void setFoodList(FoodList foodList) {
-        this.foodList = foodList;
+    public void setDtoAssembler(FoodDtoAssembler dtoAssembler) {
+        this.dtoAssembler = dtoAssembler;
     }
 
     @Autowired
@@ -35,18 +37,18 @@ public class FoodController {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Map<String, Double>>getFoods(){
-        return new ResponseEntity<>(foodList.getFoodMap(), HttpStatus.OK);
+    public ResponseEntity<List<FoodDto>>getFoods(){
+        return new ResponseEntity<>(dtoAssembler.convertToDto( foodService.list() ), HttpStatus.OK);
     }
-
 
     @RequestMapping(value = "/add",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Food> createFood(@RequestBody Food food){
+    public ResponseEntity<FoodDto> createFood(@Valid @RequestBody FoodDto foodDto){
+        Food food = dtoAssembler.convertFromDto(foodDto);
         Food savedFood = foodService.save(food);
 
-        return new ResponseEntity<>(savedFood, HttpStatus.OK);
+        return new ResponseEntity<>(dtoAssembler.convertToDto(savedFood), HttpStatus.OK);
     }
 }
