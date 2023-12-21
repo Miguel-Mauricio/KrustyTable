@@ -7,6 +7,10 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="take_away.js"></script>
+
     
     <link rel="apple-touch-icon" href="icon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -129,30 +133,24 @@
             </ul>
         </div>
         <div class="takeAway-form-container">
-            <form>
+            <form onsubmit="return false;">
                 <br>
                 <br>
                 <br>
                 <label for="food-choice">Choose wisely:</label>
                 <select id="food-choice" name="food-choice" >
-                    <option value="triple-krusty-cheese">Triple Krusty Cheese</option>
-                    <option value="double-krusty-cheese">Double Krusty Cheese</option>
-                    <option value="single-krusty-cheese">Single Krusty Cheese</option>
-                    <option value="krusty-bacon">Krusty Bacon</option>
-                    <option value="krusty-royal">Krusty Royal</option>
-
                 </select>
                 <label for="date">Ahoy! Who are you sailor?</label>
                 <br>
                 <label for="fname">First Name:</label><br>
-                <input type="text" id="fname" name="name" placeholder="first name">
+                <input type="text" id="fname2" name="name" placeholder="first name">
                 <label for="lname">Last Name:</label><br>
-                <input type="text" id="lname" name="lastName" placeholder="last name">
+                <input type="text" id="lname2" name="lastName" placeholder="last name">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email here">
+                <input type="email" id="email2" name="email" placeholder="Your email here">
                 <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="Phone-Number" placeholder="Insert Your phone">
-                <input id="btn-reservations" type="submit" value="Submit">
+                <input type="tel" id="phone2" name="Phone-Number" placeholder="Insert Your phone">
+                <input id="btn-takeaway" type="submit" value="Submit">
             </form>
         </div>
     </section>

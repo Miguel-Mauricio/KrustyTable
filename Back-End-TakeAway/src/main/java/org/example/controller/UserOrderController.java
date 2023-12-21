@@ -41,6 +41,7 @@ public class UserOrderController {
         this.orderDtoAssembler = orderDtoAssembler;
     }
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/{id}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -51,6 +52,7 @@ public class UserOrderController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -61,6 +63,7 @@ public class UserOrderController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE

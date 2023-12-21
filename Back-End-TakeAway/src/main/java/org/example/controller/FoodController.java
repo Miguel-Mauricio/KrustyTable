@@ -33,6 +33,7 @@ public class FoodController {
         this.foodService = foodService;
     }
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -41,6 +42,7 @@ public class FoodController {
         return new ResponseEntity<>(dtoAssembler.convertToDto( foodService.list() ), HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/add",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE
