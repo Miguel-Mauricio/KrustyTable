@@ -3,6 +3,8 @@ body, html {
     padding-top: 70px;
     font-family: 'Arial', sans-serif; 
     background-image: url('https://images.hdqwalls.com/download/spongebob-4k-wy-3840x2160.jpg'); 
+    scroll-behavior: smooth;
+    
 }
 
 .navbar h1{
@@ -19,7 +21,7 @@ body, html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 0;
+        padding: 1.5em 0;
         background-color: #fff;
         margin: 0; 
     }
@@ -46,21 +48,42 @@ body, html {
     text-transform: uppercase; 
     font-size: 0.9em; 
 }
+.navigation a:hover{
+content: url('https://styles.redditmedia.com/t5_2sc60/styles/communityIcon_ee7o465jds3c1.png');
+max-width: 50px;
+max-height: 50px;
+border-radius: 15px 15px 15px 15px;
+}
 
 .content-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    align-items: center; 
+    margin-top: 0; 
+    height: 100vh; 
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
+.text-content {
+    flex-basis: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+
 .text-content h2 {
-    font-size: 1.5em; 
+    justify-content: center;
+    font-size: 1.8em; 
     font-weight: normal;
     letter-spacing: 1px; 
     color: #333; 
     margin-bottom: 0.5em; 
     text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
+    
 }
 
 .text-content p {
@@ -69,6 +92,8 @@ body, html {
     line-height: 1.2; 
     color: #333;
     margin-bottom: 1em; 
+    font-family: 'Bubblegum Sans', cursive;
+    
 }
 
 .text-content button {
@@ -81,46 +106,32 @@ body, html {
     background-color: transparent; 
     color: #333;
     font-weight: bold;
-    position: relative; 
     margin-top: 2em;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    align-self: center; 
 }
+
+
 .text-content button:hover {
     background-image: url('https://i.pinimg.com/originals/49/6e/a9/496ea99942eea8bade5516a5f88ee54d.png');
     background-position: center;
     font-size: 1.2em;
-    transform: scale(1.6) translateX(-45%);
-    margin-top: 10px;
+    color: transparent;
+    transform: scale(1.6) ;
     box-shadow: 10px 10px rgba(255, 91, 21, 0.2);
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
+    position: relative;
 }
 
 
 
 .image-content {
-    flex-basis: 50%;
+    flex-basis: 50%; 
 }
+
 
 .image-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-
-.scroll-arrow-container {
-    text-align: center;
-    margin-top: 20px; 
-}
-
-.scroll-arrow {
-    cursor: pointer;
-    width: 30px; 
-    height: auto;
-    padding-left: 6em;
+    width: 100%; 
+    height: 100vh; 
 }
 
 .info-section {
@@ -138,6 +149,8 @@ body, html {
     max-width: 1200px; 
     text-align: center;
 }
+
+
 
 .info-section h2 {
     font-size: 2.5em; 
@@ -205,18 +218,27 @@ body, html {
     display: flex;
     height: 100vh;
     color: #000000;
-    background-image: linear-gradient(to right, rgba(55, 55, 116, 0), rgb(93, 89, 89));    
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/dde47yj-aea81a6b-3874-4ed8-aea3-26a456c7a23f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkODdiMGY0LWFlMjYtNGIxOC04MzVjLWFmM2E3Y2UxMzQ5ZlwvZGRlNDd5ai1hZWE4MWE2Yi0zODc0LTRlZDgtYWVhMy0yNmE0NTZjN2EyM2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VeuUbwR7x4o7yk_8D-jPMoTPXD5mVmMEdbJ6CEG9B9s');    
     margin: 0;
     align-items: center; 
     justify-content: center; 
 }
 .reservations-info, .form-container {
-    flex: 1;
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2em;
+    align-items: center; 
+    padding: 2em; 
+    background-color: #fff;
+    width: auto; 
+    max-width: 50%; 
+    max-width: 70%;
+    display: inline-flex;
+    margin-bottom: 2em;;
 }
+
 
 
 .reservations-info h2 {
@@ -231,17 +253,20 @@ body, html {
     
 }
 .form-container {
+    flex: 1;        
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; 
+    height: 95%; 
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 15px; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .form-container form {
-    width: 80%; 
+    width: 50%; 
     max-width: 500px; 
     display: flex;
     flex-direction: column;
@@ -295,3 +320,114 @@ select::-ms-expand {
     display: none; 
 }
 
+
+
+.takeAway-section {
+    display: flex;
+    height: 100vh;
+    color: #000000;
+    background-image: url('https://e0.pxfuel.com/wallpapers/887/92/desktop-wallpaper-viacom-files-lawsuit-against-would-be-krusty-krab-restaurant.jpg');    
+    margin: 0;
+    align-items: center; 
+    justify-content: center; 
+}
+.takeAway-info, .takeAway-form-container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    align-items: center; 
+    padding: 2em; 
+    background-color: #fff;
+    width: auto; 
+    max-width: 50%; 
+    max-width: 70%;
+    display: inline-flex;
+}
+
+
+
+.takeAway-info h2 {
+    margin-bottom: 0.5em; 
+    text-align: center;
+}
+
+.takeAway-info ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    
+}
+.takeAway-form-container {
+    flex: 1;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 95%; 
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.takeAway-form-container form {
+    width: 50%; 
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.takeAway-form-container label {
+    font-size: 1em;
+    color: #333333; 
+    margin-bottom: 5px;
+}
+
+.takeAway-form-container input[type="text"],
+.takeAway-form-container input[type="email"],
+.takeAway-form-container input[type="tel"],
+.takeAway-form-container input[type="date"],
+.takeAway-form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333333;
+    border-radius: 5px; 
+    font-family: 'Arial', sans-serif;
+}
+
+.takeAway-form-container input[type="submit"] {
+    background-color: #FFD700; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.takeAway-form-container input[type="submit"]:hover {
+    background-color: #FFA500;
+}
+select {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0; 
+    border: 1px solid #333; 
+    border-radius: 5px; 
+    font-family: Arial, sans-serif; 
+    cursor: pointer; 
+}
+
+select::-ms-expand {
+    display: none; 
+}
+
+.content-container, .info-section, .neighborhood-section, 
+.reservations-section, .takeAway-section {
+    margin-bottom: 0.5em;
+}
